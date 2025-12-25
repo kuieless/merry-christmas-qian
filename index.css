@@ -1,0 +1,78 @@
+/* Global styles for the Christmas app */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #002418;
+  overflow: hidden;
+  font-family: 'Times New Roman', serif;
+  /* 防止手机上的滚动和缩放 */
+  touch-action: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.times {
+  font-family: 'Times New Roman', serif;
+}
+
+/* Ensure the app takes full viewport */
+#root {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* Loading animation styles */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Glow effects */
+.drop-shadow-glow {
+  filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.5));
+}
+
+/* 手机适配 */
+@media (max-width: 768px) {
+  .text-6xl {
+    font-size: 2.5rem;
+  }
+  
+  .text-4xl {
+    font-size: 2rem;
+  }
+  
+  .text-2xl {
+    font-size: 1.25rem;
+  }
+}
+
+/* 横屏提示 */
+@media (orientation: landscape) and (max-height: 500px) {
+  .landscape-warning {
+    display: block;
+  }
+}
+
+.landscape-warning {
+  display: none;
+}
